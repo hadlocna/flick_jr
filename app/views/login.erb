@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Login to Post Photos</h1>
+
+  <% if session[:login] == false %>
+  <h1> Bad login</h1>
+  <%end%>
+
+<form action="/login" method="post">
+Username: <input type="text" name="name">
+Password: <input type="password" name="password">
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+
+
+</div>

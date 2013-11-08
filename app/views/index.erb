@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Welcome to Flickr Jr Y'all</h1>
+
+
+  <table>
+    <tr>
+      <th>Below are the most active users</th>
+    </tr>
+  </table>
+      <div class="userButtons">
+        <% users = User.all %>
+        <% users.each do |user| %>
+          <form action = "/albums/<%=user.id%>" method = "get">
+          <button type="submit"><%= user.name %></button>
+          </form>
+        <% end %>
+      </div>
+
+
+
+</div>

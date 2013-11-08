@@ -1,0 +1,20 @@
+<div class="container">
+<h1> Albums for <%=User.find(@user_album_id).name%> Yo </h1>
+
+
+  <div class="userButtons">
+    <% user = User.find(@user_album_id) %>
+    <% user.albums.each do |album| %>
+      <form action = "/albums/<%=user.id%>/<%=album.id%>" method = "get">
+      <button type="submit"><%= album.name %></button>
+      </form>
+    <% end %>
+  </div>
+    <h1> Create New Album </h1>
+    <form action="/post/<%=@user_album_id%>" method="get">
+      Album Name: <input type="text" name="album_name">
+      <input type="submit" value="Submit">
+    </form>
+  <div>
+
+</div>

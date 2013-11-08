@@ -1,0 +1,10 @@
+<div class="container">
+<h1> <%=User.find(@user_id).name%> Create New Album Below </h1>
+
+  <form action="/post/<%=session[:id]%>" method="post">
+  Photo Name: <input type="text" name="photo-name">
+  Photo Location: <input type="text" name="photo-location">
+  <input type="submit" value="Submit">
+  </form>
+
+</div>

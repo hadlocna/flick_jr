@@ -1,0 +1,26 @@
+<div class="container">
+<h1> <%=User.find(@user_id).name%>'s Photos for Album <%=Album.find(@album_id).name%> Yo </h1>
+<div class ="return">
+  <a href = "/albums/<%=@user_id%>">Return to all Albums</a>
+
+  <div class="userButtons">
+
+
+  </div>
+
+  <div>
+  <h1> Create New Photo </h1>
+    <form action="/post/<%=session[:id]%>/<%=@album_id%>" method="get">
+      <p>Photo Name: <input type="text" name="photo_name"></p>
+      <p>Photo Location: <input type="text" name="photo_location"></p>
+    </form>
+
+    <form action="/post/photo/<%=@album_id%>" method="post">
+    <input type="file" name="filename">
+      <input type="submit" value="Submit">
+    </form>
+
+
+  </div>
+
+</div>
